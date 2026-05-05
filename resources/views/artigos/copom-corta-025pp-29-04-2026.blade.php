@@ -223,7 +223,7 @@
     <main class="container">
         <article itemscope itemtype="https://schema.org/Article">
             <p class="kicker">Política Monetária</p>
-            <h1>🇧🇷‼ Copom corta 0,25pp, mas o comunicado fala mais alto que a decisão</h1>
+            <h1>Copom corta 0,25pp, mas o comunicado fala mais alto que a decisão</h1>
             <p class="meta"><span itemprop="author">Por Guilherme Jung, Economista da Alta Vista Investimentos</span> | <time datetime="2026-04-29" itemprop="datePublished">29/04/2026</time></p>
 
             <p class="lead">

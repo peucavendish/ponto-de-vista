@@ -4,6 +4,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('app.name', 'Ponto de Vista') }}</title>
+    <meta name="description" content="Análises e conteúdos da Alta Vista Investimentos em um só lugar.">
+
+    <!-- Favicon e imagem para compartilhamento -->
+    <link rel="icon" type="image/png" href="{{ asset('Ponto_de_Vista.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('Ponto_de_Vista.png') }}">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ config('app.name', 'Ponto de Vista') }}">
+    <meta property="og:description" content="Análises e conteúdos da Alta Vista Investimentos em um só lugar.">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="{{ url(asset('Ponto_de_Vista_v2.png')) }}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ url(asset('Ponto_de_Vista_v2.png')) }}">
+    <meta name="twitter:title" content="{{ config('app.name', 'Ponto de Vista') }}">
+    <meta name="twitter:description" content="Análises e conteúdos da Alta Vista Investimentos em um só lugar.">
     <style>
         :root {
             color-scheme: light;
@@ -389,7 +405,7 @@
                 <span>Portal de Conteúdos da Alta Vista Investimentos</span>
             </div>
             <nav>
-                <a class="btn-hub" href="https://ponto-de-vista.tradeinsights.com/plano/leads/leads" target="_blank" rel="noopener noreferrer">Acessar Hub Audiovisual</a>
+                <a class="btn-hub" href="https://ponto-de-vista.tradeinsights.com/plano/interno-av/gratuito" target="_blank" rel="noopener noreferrer">Acessar Hub Audiovisual</a>
                 <a class="nav-invest" href="https://lp.altavistainvest.com.br/conteudos-investir" target="_blank" rel="noopener noreferrer">Quero investir</a>
             </nav>
         </div>
@@ -405,7 +421,7 @@
                     com linguagem clara e foco prático para apoiar suas decisões financeiras.
                 </p>
                 <div class="hero-actions">
-                    <a class="btn btn-hub" href="https://ponto-de-vista.tradeinsights.com/plano/leads/leads" target="_blank" rel="noopener noreferrer">
+                    <a class="btn btn-hub" href="https://ponto-de-vista.tradeinsights.com/plano/interno-av/gratuito" target="_blank" rel="noopener noreferrer">
                         Acessar Hub de Conteúdos Audiovisuais
                     </a>
                 </div>
@@ -422,7 +438,7 @@
             <h2>Série de Artigos do Economista-Chefe</h2>
             <p>Análises especiais assinadas por Guilherme Jung sobre política monetária, inflação e mercado.</p>
             <article class="economist-card">
-                <strong>🇧🇷‼️ Copom corta 0,25pp, mas o comunicado fala mais alto que a decisão</strong>
+                <strong>Copom reduz 0,25pp; comunicado ajusta o guidance</strong>
                 <span>Por Guilherme Jung | 29/04/2026</span>
                 <a class="btn btn-primary" href="{{ route('artigos.copom-corta-025pp-29-04-2026') }}">Ler artigo completo</a>
             </article>
@@ -462,7 +478,7 @@
     </main>
 
     <footer class="wrapper">
-        {{ config('app.name', 'Ponto de Vista') }} - Base inicial inspirada em portais editoriais financeiros.
+        {{ config('app.name', 'Ponto de Vista') }} · Alta Vista Investimentos
     </footer>
 </body>
 </html>

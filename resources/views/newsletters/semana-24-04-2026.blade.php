@@ -9,18 +9,6 @@
 
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
       <tr>
-        <td align="center" style="padding:10px 10px 0 10px;">
-          <p style="margin:0; font-size:14px; font-family:Arial, sans-serif; color:#718096;">
-            <a href="*|ARCHIVE|*" style="color:#718096; text-decoration:underline;">Ver no navegador</a>
-            <span style="color:#a0aec0;"> · </span>
-            <a href="https://lp.altavistainvest.com.br/newsletter/ponto-de-vista-24-04-2026" target="_blank" rel="noopener noreferrer" style="color:#718096; text-decoration:underline;">Ler no site</a>
-          </p>
-        </td>
-      </tr>
-    </table>
-
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-      <tr>
         <td align="center" style="padding:14px 10px;">
           <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="max-width:600px; background-color:#ffffff; border-radius:20px; overflow:hidden; box-shadow:0 10px 30px rgba(10,22,40,0.10);">
 
@@ -69,7 +57,7 @@
             <tr>
               <td align="left" style="padding:18px 30px 8px 30px;">
                 <p style="margin:0; font-size:17px; line-height:1.7; color:#4a5568; font-family:Arial, sans-serif;">
-                  *|FNAME|*,
+                  Olá,
                 </p>
               </td>
             </tr>
@@ -267,9 +255,6 @@
               <td align="center" style="padding:14px 24px 20px 24px; background-color:#f8fafc; border-top:1px solid #e2e8f0;">
                 <p style="margin:0 0 4px 0; font-size:14px; line-height:1.6; color:#718096; font-family:Arial, sans-serif;">
                   Alta Vista Investimentos - Assessoria de Investimentos.
-                </p>
-                <p style="margin:0; font-size:14px; line-height:1.6; color:#a0aec0; font-family:Arial, sans-serif;">
-                  Se não quiser mais receber nossos e-mails, <a href="*|UNSUB|*" style="color:#a0aec0; text-decoration:underline;">descadastre-se</a>.
                 </p>
               </td>
             </tr>
