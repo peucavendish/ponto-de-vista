@@ -449,6 +449,10 @@
             <p class="panel-sub">Acesse as últimas edições do Ponto de Vista em um clique.</p>
             <div class="newsletter-grid">
                 <article class="newsletter-item">
+                    <strong>Ponto de Vista - Semana 30/04/2026</strong>
+                    <a href="{{ route('newsletters.semana-30-04-2026') }}">Ler agora →</a>
+                </article>
+                <article class="newsletter-item">
                     <strong>Ponto de Vista - Semana 24/04/2026</strong>
                     <a href="{{ route('newsletters.semana-24-04-2026') }}">Ler agora →</a>
                 </article>

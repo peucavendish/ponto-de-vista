@@ -6,6 +6,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::view('/newsletters/semana-30-04-2026', 'newsletters.semana-30-04-2026')->name('newsletters.semana-30-04-2026');
 Route::view('/newsletters/semana-24-04-2026', 'newsletters.semana-24-04-2026')->name('newsletters.semana-24-04-2026');
 Route::view('/newsletters/semana-17-04-2026', 'newsletters.semana-17-04-2026')->name('newsletters.semana-17-04-2026');
 Route::view('/newsletters/semana-11-04-2026', 'newsletters.semana-11-04-2026')->name('newsletters.semana-11-04-2026');
