@@ -217,7 +217,7 @@
 <body>
     <div class="container top">
         <a class="back" href="{{ url('/') }}">← Voltar ao portal</a>
-        <span class="section-chip">Série do Economista-Chefe</span>
+        <span class="section-chip">Série de análises</span>
     </div>
 
     <main class="container">

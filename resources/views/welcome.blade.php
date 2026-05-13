@@ -357,6 +357,10 @@
             background: #f8faff;
         }
 
+        .economist-card + .economist-card {
+            margin-top: 0.75rem;
+        }
+
         .economist-card strong {
             display: block;
             font-size: 1rem;
@@ -435,11 +439,11 @@
         </section>
 
         <section class="economist-series">
-            <h2>Série de Artigos do Economista-Chefe</h2>
-            <p>Análises especiais assinadas por Guilherme Jung sobre política monetária, inflação e mercado.</p>
+            <h2>Série de análises da Alta Vista</h2>
+            <p>Artigos assinados por nossa equipe de economia, renda fixa e mercados — macro, juros, inflação e estratégia.</p>
             <article class="economist-card">
                 <strong>CDI vs IPCA+: histórico dos últimos 25 anos</strong>
-                <span>Por Guilherme Jung | 13/05/2026</span>
+                <span>Por Alexandre Setani | 13/05/2026</span>
                 <a class="btn btn-primary" href="{{ route('artigos.cdi-vs-ipca-plus-historico-25-anos') }}">Ler artigo completo</a>
             </article>
             <article class="economist-card">

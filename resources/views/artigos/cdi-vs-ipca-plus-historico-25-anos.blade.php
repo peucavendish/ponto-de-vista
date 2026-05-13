@@ -13,7 +13,7 @@
     <meta property="og:url" content="{{ url('/artigos/economista-chefe/cdi-vs-ipca-plus-historico-25-anos') }}">
     <meta property="og:image" content="{{ url(asset('artigos/cdi-vs-ipca-plus-25-anos-grafico.png')) }}">
     <meta property="og:site_name" content="Ponto de Vista">
-    <meta property="article:author" content="Guilherme Jung">
+    <meta property="article:author" content="Alexandre Setani">
     <meta property="article:published_time" content="2026-05-13">
     <meta property="article:section" content="Renda fixa">
     <meta name="twitter:card" content="summary_large_image">
@@ -27,7 +27,8 @@
             "headline": "CDI vs IPCA+: histórico dos últimos 25 anos",
             "author": {
                 "@@type": "Person",
-                "name": "Guilherme Jung"
+                "name": "Alexandre Setani",
+                "jobTitle": "Head de Renda Fixa da Alta Vista Investimentos"
             },
             "publisher": {
                 "@@type": "Organization",
@@ -183,22 +184,161 @@
         }
 
         .figure {
-            margin: 1rem 0 1.1rem;
-            text-align: center;
-        }
-
-        .figure img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            border: 1px solid var(--line);
-            background: #fff;
+            margin: 1rem 0 0.35rem;
         }
 
         .figure figcaption {
-            margin-top: 0.5rem;
+            margin-top: 0.65rem;
             font-size: 0.88rem;
             color: var(--muted);
+            text-align: center;
+        }
+
+        .chart-card {
+            margin: 0;
+            padding: 0.85rem 0.75rem 0.35rem;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            box-shadow: 0 4px 20px rgba(13, 28, 57, 0.07);
+        }
+
+        .chart-canvas-wrap {
+            position: relative;
+            width: 100%;
+            height: clamp(280px, 52vw, 440px);
+            max-height: 460px;
+        }
+
+        @media (max-width: 680px) {
+            .chart-card { padding: 0.65rem 0.45rem 0.25rem; }
+            .chart-canvas-wrap { height: min(320px, 72vw); }
+        }
+
+        .sim-card {
+            margin: 0.9rem 0 1rem;
+            background: linear-gradient(180deg, #f7faff 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 1rem 1rem 0.9rem;
+            box-shadow: 0 6px 22px rgba(13, 28, 57, 0.05);
+        }
+
+        .sim-card h3 {
+            margin: 0 0 0.15rem;
+            color: var(--brand);
+            font-size: 1rem;
+        }
+
+        .sim-card .sim-sub {
+            margin: 0 0 0.85rem;
+            color: var(--muted);
+            font-size: 0.88rem;
+        }
+
+        .sim-form {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 0.6rem 0.7rem;
+            align-items: end;
+        }
+
+        .sim-field { display: flex; flex-direction: column; gap: 0.25rem; }
+
+        .sim-field label {
+            font-size: 0.78rem;
+            color: #48618e;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .sim-field .input-wrap {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .sim-field .input-prefix {
+            position: absolute;
+            left: 0.7rem;
+            color: var(--muted);
+            font-size: 0.92rem;
+            pointer-events: none;
+        }
+
+        .sim-field input,
+        .sim-field select {
+            width: 100%;
+            border: 1px solid var(--line);
+            background: #fff;
+            border-radius: 10px;
+            padding: 0.55rem 0.7rem;
+            font-size: 0.95rem;
+            color: var(--text);
+            font-family: inherit;
+            outline: none;
+            transition: border-color .15s ease, box-shadow .15s ease;
+        }
+
+        .sim-field input.with-prefix { padding-left: 2.05rem; }
+
+        .sim-field input:focus,
+        .sim-field select:focus {
+            border-color: var(--brand);
+            box-shadow: 0 0 0 3px rgba(22, 63, 136, 0.12);
+        }
+
+        .sim-results {
+            margin-top: 0.9rem;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.55rem;
+        }
+
+        .sim-result {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 0.7rem 0.8rem;
+        }
+
+        .sim-result.is-cdi { border-top: 3px solid #94a3b8; }
+        .sim-result.is-ipca { border-top: 3px solid #0f2847; }
+        .sim-result.is-ip6 { border-top: 3px solid #1d4ed8; }
+
+        .sim-result .sim-label {
+            font-size: 0.74rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #5f7090;
+            font-weight: 700;
+        }
+
+        .sim-result .sim-value {
+            margin-top: 0.2rem;
+            font-size: 1.12rem;
+            font-weight: 700;
+            color: var(--text);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .sim-result .sim-delta {
+            margin-top: 0.1rem;
+            font-size: 0.82rem;
+            color: var(--muted);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .sim-footnote {
+            margin: 0.65rem 0 0;
+            font-size: 0.78rem;
+            color: var(--muted);
+        }
+
+        @media (max-width: 680px) {
+            .sim-form { grid-template-columns: 1fr 1fr; }
+            .sim-field.is-amount { grid-column: 1 / -1; }
+            .sim-results { grid-template-columns: 1fr; }
         }
 
         .table-wrap {
@@ -295,14 +435,14 @@
 <body>
     <div class="container top">
         <a class="back" href="{{ url('/') }}">← Voltar ao portal</a>
-        <span class="section-chip">Série do Economista-Chefe</span>
+        <span class="section-chip">Série de análises</span>
     </div>
 
     <main class="container">
         <article itemscope itemtype="https://schema.org/Article">
             <p class="kicker">Renda fixa</p>
             <h1>CDI vs IPCA+: histórico dos últimos 25 anos</h1>
-            <p class="meta"><span itemprop="author">Por Guilherme Jung, Economista da Alta Vista Investimentos</span> | <time datetime="2026-05-13" itemprop="datePublished">13/05/2026</time></p>
+            <p class="meta"><span itemprop="author">Por Alexandre Setani, Head de Renda Fixa da Alta Vista Investimentos</span> | <time datetime="2026-05-13" itemprop="datePublished">13/05/2026</time></p>
 
             <p class="lead">
                 Uma das dúvidas mais frequentes entre investidores em renda fixa é se compensa mais investir atrelado ao CDI ou ao IPCA+. Ainda que a recomendação geral seja buscar uma estratégia diversificada, faz sentido entender o histórico desses indexadores.
@@ -330,10 +470,101 @@
                     Para o estudo realizado, consideramos os retornos brutos dos índices. O gráfico abaixo apresenta a evolução do CDI, do IPCA e do IPCA+6% entre 2001 e 2025.
                 </p>
 
+                @php
+                    $cdiVsIpcaAnnual = [
+                        ['cdi' => 17.32, 'ipca' => 7.67, 'ip6' => 14.13],
+                        ['cdi' => 19.17, 'ipca' => 12.53, 'ip6' => 19.28],
+                        ['cdi' => 23.35, 'ipca' => 9.30, 'ip6' => 15.86],
+                        ['cdi' => 16.25, 'ipca' => 7.60, 'ip6' => 14.06],
+                        ['cdi' => 19.05, 'ipca' => 5.69, 'ip6' => 12.03],
+                        ['cdi' => 15.08, 'ipca' => 3.14, 'ip6' => 9.33],
+                        ['cdi' => 11.88, 'ipca' => 4.46, 'ip6' => 10.72],
+                        ['cdi' => 12.48, 'ipca' => 5.90, 'ip6' => 12.26],
+                        ['cdi' => 9.93, 'ipca' => 4.31, 'ip6' => 10.57],
+                        ['cdi' => 9.78, 'ipca' => 5.91, 'ip6' => 12.26],
+                        ['cdi' => 11.62, 'ipca' => 6.50, 'ip6' => 12.89],
+                        ['cdi' => 8.49, 'ipca' => 5.84, 'ip6' => 12.19],
+                        ['cdi' => 8.22, 'ipca' => 5.91, 'ip6' => 12.27],
+                        ['cdi' => 10.90, 'ipca' => 6.41, 'ip6' => 12.79],
+                        ['cdi' => 13.27, 'ipca' => 10.67, 'ip6' => 17.31],
+                        ['cdi' => 14.02, 'ipca' => 6.29, 'ip6' => 12.67],
+                        ['cdi' => 9.94, 'ipca' => 2.95, 'ip6' => 9.12],
+                        ['cdi' => 6.43, 'ipca' => 3.75, 'ip6' => 9.97],
+                        ['cdi' => 5.96, 'ipca' => 4.31, 'ip6' => 10.56],
+                        ['cdi' => 2.76, 'ipca' => 4.52, 'ip6' => 10.79],
+                        ['cdi' => 4.42, 'ipca' => 10.06, 'ip6' => 16.66],
+                        ['cdi' => 12.39, 'ipca' => 5.78, 'ip6' => 12.13],
+                        ['cdi' => 13.04, 'ipca' => 4.62, 'ip6' => 10.90],
+                        ['cdi' => 10.88, 'ipca' => 4.83, 'ip6' => 11.12],
+                        ['cdi' => 14.32, 'ipca' => 4.26, 'ip6' => 10.52],
+                    ];
+                    $chartLabels = [];
+                    $chartCdi = [];
+                    $chartIpca = [];
+                    $chartIp6 = [];
+                    $mCdi = 1.0;
+                    $mIpca = 1.0;
+                    $mIp6 = 1.0;
+                    foreach ($cdiVsIpcaAnnual as $i => $row) {
+                        $mCdi *= 1 + $row['cdi'] / 100;
+                        $mIpca *= 1 + $row['ipca'] / 100;
+                        $mIp6 *= 1 + $row['ip6'] / 100;
+                        $chartLabels[] = (string) (2001 + $i);
+                        $chartCdi[] = round(($mCdi - 1) * 100, 2);
+                        $chartIpca[] = round(($mIpca - 1) * 100, 2);
+                        $chartIp6[] = round(($mIp6 - 1) * 100, 2);
+                    }
+                @endphp
+
                 <figure class="figure">
-                    <img src="{{ asset('artigos/cdi-vs-ipca-plus-25-anos-grafico.png') }}" alt="Gráfico de linhas: CDI acumulado, IPCA acumulado e IPCA+6% de janeiro de 2001 a janeiro de 2025" loading="lazy">
-                    <figcaption>CDI vs IPCA+6% — evolução acumulada (2001–2025).</figcaption>
+                    <div class="chart-card">
+                        <div class="chart-canvas-wrap">
+                            <canvas id="cdiIpcaChart" aria-label="Gráfico de linhas: retorno acumulado em percentual do CDI, IPCA e IPCA+6% de 2001 a 2025" role="img"></canvas>
+                        </div>
+                    </div>
+                    <figcaption>CDI vs IPCA+6% — retorno acumulado bruto (%) ao fim de cada ano, com base na tabela de retornos anuais do estudo (2001–2025).</figcaption>
                 </figure>
+
+                <div class="sim-card" role="region" aria-label="Simulador: quanto teria hoje">
+                    <h3>E se você tivesse aplicado?</h3>
+                    <p class="sim-sub">Simule quanto um valor aplicado em janeiro de um ano teria rendido até o fim de outro ano, comparando CDI, IPCA e IPCA+6% com os retornos brutos do estudo.</p>
+                    <form class="sim-form" id="cdiIpcaSimForm" onsubmit="return false;">
+                        <div class="sim-field is-amount">
+                            <label for="simAmount">Valor aplicado</label>
+                            <div class="input-wrap">
+                                <span class="input-prefix">R$</span>
+                                <input type="text" inputmode="decimal" id="simAmount" class="with-prefix" value="10.000" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="sim-field">
+                            <label for="simStart">Ano inicial</label>
+                            <select id="simStart"></select>
+                        </div>
+                        <div class="sim-field">
+                            <label for="simEnd">Ano final</label>
+                            <select id="simEnd"></select>
+                        </div>
+                    </form>
+
+                    <div class="sim-results" aria-live="polite">
+                        <div class="sim-result is-cdi">
+                            <div class="sim-label">CDI</div>
+                            <div class="sim-value" id="simValueCdi">—</div>
+                            <div class="sim-delta" id="simDeltaCdi">—</div>
+                        </div>
+                        <div class="sim-result is-ip6">
+                            <div class="sim-label">IPCA + 6% a.a.</div>
+                            <div class="sim-value" id="simValueIp6">—</div>
+                            <div class="sim-delta" id="simDeltaIp6">—</div>
+                        </div>
+                        <div class="sim-result is-ipca">
+                            <div class="sim-label">IPCA (inflação)</div>
+                            <div class="sim-value" id="simValueIpca">—</div>
+                            <div class="sim-delta" id="simDeltaIpca">—</div>
+                        </div>
+                    </div>
+                    <p class="sim-footnote">Considera aplicação no início do ano inicial e resgate no fim do ano final, com retornos brutos compostos. Não considera tributos nem custos.</p>
+                </div>
 
                 <p><strong>Principais destaques desse gráfico são:</strong></p>
                 <ul>
@@ -512,5 +743,216 @@
             </section>
         </article>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" crossorigin="anonymous"></script>
+    <script>
+        (function () {
+            const labels = @json($chartLabels);
+            const dataIpca = @json($chartIpca);
+            const dataCdi = @json($chartCdi);
+            const dataIp6 = @json($chartIp6);
+            const annual = @json($cdiVsIpcaAnnual);
+
+            const el = document.getElementById('cdiIpcaChart');
+
+            const fmtPct = function (v) {
+                return v.toLocaleString('pt-BR', { maximumFractionDigits: 0 }) + '%';
+            };
+
+            if (el && typeof Chart !== 'undefined') new Chart(el, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'IPCA acumulado',
+                            data: dataIpca,
+                            borderColor: '#0f2847',
+                            backgroundColor: 'rgba(15, 40, 71, 0.06)',
+                            borderWidth: 2.2,
+                            tension: 0.2,
+                            pointRadius: 0,
+                            pointHitRadius: 8,
+                        },
+                        {
+                            label: 'CDI acumulado',
+                            data: dataCdi,
+                            borderColor: '#94a3b8',
+                            backgroundColor: 'rgba(148, 163, 184, 0.08)',
+                            borderWidth: 2.2,
+                            tension: 0.2,
+                            pointRadius: 0,
+                            pointHitRadius: 8,
+                        },
+                        {
+                            label: 'IPCA+6%',
+                            data: dataIp6,
+                            borderColor: '#1d4ed8',
+                            backgroundColor: 'rgba(29, 78, 216, 0.08)',
+                            borderWidth: 2.4,
+                            tension: 0.2,
+                            pointRadius: 0,
+                            pointHitRadius: 8,
+                        },
+                    ],
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: { mode: 'index', intersect: false },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'CDI vs IPCA+6% — retorno acumulado (%)',
+                            color: '#12284a',
+                            font: { family: 'Inter, system-ui, sans-serif', size: 15, weight: '600' },
+                            padding: { bottom: 10, top: 4 },
+                        },
+                        legend: {
+                            position: 'top',
+                            align: 'start',
+                            labels: {
+                                boxWidth: 14,
+                                boxHeight: 14,
+                                padding: 14,
+                                color: '#23395f',
+                                font: { family: 'Inter, system-ui, sans-serif', size: 12 },
+                            },
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (ctx) {
+                                    const v = ctx.raw;
+                                    return ctx.dataset.label + ': ' + v.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + '%';
+                                },
+                            },
+                        },
+                    },
+                    scales: {
+                        x: {
+                            grid: { display: false },
+                            ticks: {
+                                maxTicksLimit: 9,
+                                autoSkip: true,
+                                color: '#5f7090',
+                                font: { size: 11 },
+                            },
+                        },
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(18, 40, 74, 0.07)' },
+                            ticks: {
+                                color: '#5f7090',
+                                font: { size: 11 },
+                                callback: function (v) { return fmtPct(v); },
+                            },
+                        },
+                    },
+                },
+            });
+
+            const simForm = document.getElementById('cdiIpcaSimForm');
+            if (simForm) {
+                const inputAmount = document.getElementById('simAmount');
+                const selStart = document.getElementById('simStart');
+                const selEnd = document.getElementById('simEnd');
+                const elCdi = document.getElementById('simValueCdi');
+                const elIp6 = document.getElementById('simValueIp6');
+                const elIpca = document.getElementById('simValueIpca');
+                const dCdi = document.getElementById('simDeltaCdi');
+                const dIp6 = document.getElementById('simDeltaIp6');
+                const dIpca = document.getElementById('simDeltaIpca');
+
+                const years = labels.map(function (l) { return parseInt(l, 10); });
+                const firstYear = years[0];
+                const lastYear = years[years.length - 1];
+
+                years.forEach(function (y) {
+                    const optA = document.createElement('option');
+                    optA.value = String(y); optA.textContent = String(y);
+                    selStart.appendChild(optA);
+                    const optB = document.createElement('option');
+                    optB.value = String(y); optB.textContent = String(y);
+                    selEnd.appendChild(optB);
+                });
+                selStart.value = String(firstYear);
+                selEnd.value = String(lastYear);
+
+                const fmtBRL = function (v) {
+                    return v.toLocaleString('pt-BR', {
+                        style: 'currency',
+                        currency: 'BRL',
+                        maximumFractionDigits: 2,
+                    });
+                };
+                const fmtPctSigned = function (v) {
+                    const s = v >= 0 ? '+' : '';
+                    return s + v.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + '%';
+                };
+
+                const parseAmount = function (raw) {
+                    if (raw == null) return 0;
+                    let s = String(raw).trim().replace(/\s/g, '').replace(/^R\$\s?/i, '');
+                    if (!s) return 0;
+                    if (s.indexOf(',') > -1) {
+                        s = s.replace(/\./g, '').replace(',', '.');
+                    } else {
+                        s = s.replace(/\./g, '');
+                    }
+                    const n = parseFloat(s);
+                    return isFinite(n) && n > 0 ? n : 0;
+                };
+
+                const compound = function (key, fromYear, toYear) {
+                    let m = 1;
+                    for (let y = fromYear; y <= toYear; y++) {
+                        const row = annual[y - firstYear];
+                        if (!row) continue;
+                        m *= 1 + row[key] / 100;
+                    }
+                    return m;
+                };
+
+                const update = function () {
+                    let a = parseInt(selStart.value, 10);
+                    let b = parseInt(selEnd.value, 10);
+                    if (b < a) { b = a; selEnd.value = String(a); }
+                    const amount = parseAmount(inputAmount.value);
+
+                    const mCdi = compound('cdi', a, b);
+                    const mIp6 = compound('ip6', a, b);
+                    const mIpca = compound('ipca', a, b);
+
+                    const fmt = function (mult, target, delta) {
+                        if (amount <= 0) { target.textContent = '—'; delta.textContent = '—'; return; }
+                        target.textContent = fmtBRL(amount * mult);
+                        delta.textContent = fmtPctSigned((mult - 1) * 100) + ' no período';
+                    };
+                    fmt(mCdi, elCdi, dCdi);
+                    fmt(mIp6, elIp6, dIp6);
+                    fmt(mIpca, elIpca, dIpca);
+                };
+
+                inputAmount.addEventListener('input', function () {
+                    const cleaned = inputAmount.value.replace(/[^0-9.,]/g, '');
+                    if (cleaned !== inputAmount.value) inputAmount.value = cleaned;
+                    update();
+                });
+                inputAmount.addEventListener('blur', function () {
+                    const n = parseAmount(inputAmount.value);
+                    if (n > 0) {
+                        inputAmount.value = n.toLocaleString('pt-BR', {
+                            minimumFractionDigits: n % 1 === 0 ? 0 : 2,
+                            maximumFractionDigits: 2,
+                        });
+                    }
+                    update();
+                });
+                selStart.addEventListener('change', update);
+                selEnd.addEventListener('change', update);
+
+                update();
+            }
+        })();
+    </script>
 </body>
 </html>
