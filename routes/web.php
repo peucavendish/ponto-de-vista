@@ -16,3 +16,6 @@ Route::view('/newsletters/semana-23-06-2025', 'newsletters.semana-23-06-2025')->
 
 Route::view('/artigos/economista-chefe/copom-corta-025pp-29-04-2026', 'artigos.copom-corta-025pp-29-04-2026')
     ->name('artigos.copom-corta-025pp-29-04-2026');
+
+Route::view('/artigos/economista-chefe/cdi-vs-ipca-plus-historico-25-anos', 'artigos.cdi-vs-ipca-plus-historico-25-anos')
+    ->name('artigos.cdi-vs-ipca-plus-historico-25-anos');
