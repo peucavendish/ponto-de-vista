@@ -220,7 +220,12 @@ cd /var/www/ponto-de-vista
 bash scripts/deploy-on-server.sh
 ```
 
-Se já tiveres feito `git pull` noutro passo: `SKIP_GIT=1 bash scripts/deploy-on-server.sh`
+Para ver os passos no terminal (sem executar deploy):
+
+```bash
+cd /var/www/ponto-de-vista
+bash scripts/deploy-on-server.sh --help
+```
 
 Só precisa de `systemctl reload nginx` / `restart php-fpm` se alterou Nginx ou PHP; para mudanças só em views/rotas, em geral basta o `view:cache` acima.
 
