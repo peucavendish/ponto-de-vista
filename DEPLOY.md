@@ -195,39 +195,79 @@ curl -I "https://lp.altavistainvest.com.br/ponto-de-vista/"
 curl -I "https://lp.altavistainvest.com.br/ponto-de-vista/artigos/economista-chefe/copom-corta-025pp-29-04-2026"
 ```
 
-## 7) Atualização após `git push` (servidor)
+## 7) Fluxo de deploy (do Mac → GitHub → EC2)
 
-Na EC2, com o código já em `/var/www/ponto-de-vista` e o remoto configurado:
-
-```bash
-cd /var/www/ponto-de-vista
-git pull origin main
-```
-
-Em seguida, caches do Laravel (como na secção «4) Cache do Laravel»):
+Os scripts em `scripts/` automatizam o pipeline. Edite normalmente, e depois:
 
 ```bash
-cd /var/www/ponto-de-vista
-sudo -u apache php artisan optimize:clear
-sudo -u apache php artisan config:cache
-sudo -u apache php artisan view:cache
+# Mensagem opcional: cria commit local antes do push se houver mudanças.
+bash scripts/deploy.sh -m "Mensagem do commit"
+
+# Já commitado? Basta:
+bash scripts/deploy.sh
 ```
 
-Ou, de uma vez (após o `git pull` que trouxer o script):
+O que o `scripts/deploy.sh` faz, no seu Mac:
+
+1. Verifica `git status` (se houver mudanças, pede `-m` para commitar).
+2. `git push origin main`.
+3. SSH na EC2 e executa `scripts/deploy-on-server.sh` lá.
+4. `curl` nas rotas principais para checar HTTP 2xx/3xx.
+
+Variáveis úteis (têm defaults para a EC2 atual):
+
+```bash
+SSH_HOST=ec2-3-87-71-227.compute-1.amazonaws.com
+SSH_USER=ec2-user
+SSH_KEY=~/Desktop/LP_AV.pem
+REMOTE_ROOT=/var/www/ponto-de-vista
+GIT_BRANCH=main
+PRODUCTION_BASE_URL=https://lp.altavistainvest.com.br/ponto-de-vista
+```
+
+Para sobrescrever:
+
+```bash
+SSH_KEY=~/keys/outro.pem bash scripts/deploy.sh
+```
+
+Opções:
+
+```bash
+bash scripts/deploy.sh --help          # ajuda
+bash scripts/deploy.sh --dry-run       # mostra o que faria sem executar
+bash scripts/deploy.sh --skip-push     # só roda o lado servidor
+bash scripts/deploy.sh --force-composer # roda composer install no servidor
+bash scripts/deploy.sh --skip-smoke    # sem smoke tests
+```
+
+### Só no servidor (SSH manual)
+
+Se preferir rodar direto na EC2 (após `git pull`):
 
 ```bash
 cd /var/www/ponto-de-vista
 bash scripts/deploy-on-server.sh
+bash scripts/deploy-on-server.sh --help   # ver opções
 ```
 
-Para ver os passos no terminal (sem executar deploy):
+Etapas do `deploy-on-server.sh` (relevante para entender troubleshooting):
 
-```bash
-cd /var/www/ponto-de-vista
-bash scripts/deploy-on-server.sh --help
-```
+1. `git pull --ff-only origin main` (a menos que `SKIP_GIT=1`).
+2. `composer install --no-dev --optimize-autoloader` apenas se `composer.lock`
+   mudou (ou com `FORCE_COMPOSER=1`).
+3. Apaga `storage/framework/views/*.php` (views Blade compiladas antigas).
+4. Apaga `bootstrap/cache/config.php|routes-v7.php|events.php|services.php|packages.php`.
+5. `chown -R apache:apache storage bootstrap/cache`.
+6. Como `apache`: `optimize:clear`, `config:cache`, `view:cache`.
+7. `systemctl reload php-fpm` (essencial para flush do **OPcache** —
+   sem isso o PHP-FPM continua a servir a versão antiga das views compiladas).
+8. `systemctl reload nginx` (best-effort).
 
-Só precisa de `systemctl reload nginx` / `restart php-fpm` se alterou Nginx ou PHP; para mudanças só em views/rotas, em geral basta o `view:cache` acima.
+> Importante: a etapa 7 é a que evita o sintoma "no servidor está diferente do
+> local mesmo após `git pull`". O OPcache do PHP-FPM mantém em memória os
+> arquivos compilados; sem reload, alterações em `.blade.php` podem demorar a
+> aparecer.
 
 ## 8) Troubleshooting rápido
 
