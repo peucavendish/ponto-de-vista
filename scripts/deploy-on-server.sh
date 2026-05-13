@@ -99,8 +99,9 @@ if [[ "${SKIP_COMPOSER:-0}" == "1" ]]; then
   echo ">>> SKIP_COMPOSER=1 — a saltar composer install"
 elif [[ "${FORCE_COMPOSER:-0}" == "1" || "$COMPOSER_LOCK_CHANGED" == "1" ]]; then
   if [[ -f composer.json ]] && command -v composer >/dev/null 2>&1; then
-    echo ">>> composer install (produção)"
-    composer install --no-dev --no-interaction --optimize-autoloader
+    echo ">>> composer install (produção, sem hooks; package:discover roda como apache depois)"
+    composer install --no-dev --no-interaction --optimize-autoloader --no-scripts
+    NEEDS_PACKAGE_DISCOVER=1
   fi
 else
   echo ">>> composer.lock inalterado — a saltar composer install (use FORCE_COMPOSER=1 se necessário)"
@@ -124,6 +125,10 @@ sudo chown -R apache:apache storage bootstrap/cache
 
 echo ">>> Laravel cache (utilizador apache)"
 sudo -u apache php artisan optimize:clear
+if [[ "${NEEDS_PACKAGE_DISCOVER:-0}" == "1" ]]; then
+  echo ">>> Regenerando bootstrap/cache/packages.php (post-script do composer)"
+  sudo -u apache php artisan package:discover --ansi
+fi
 sudo -u apache php artisan config:cache
 sudo -u apache php artisan view:cache
 
