@@ -15,13 +15,19 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
 
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ config('app.name', 'Ponto de Vista') }}">
     <meta property="og:title" content="{{ config('app.name', 'Ponto de Vista') }}">
     <meta property="og:description" content="Análises e conteúdos da Alta Vista Investimentos em um só lugar.">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:image" content="{{ url(asset('Ponto_de_Vista_v2.png')) }}">
+    <meta property="og:image" content="{{ asset('og-ponto-de-vista-1200x630.png') }}">
+    <meta property="og:image:secure_url" content="{{ asset('og-ponto-de-vista-1200x630.png') }}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ponto de Vista — Alta Vista Investimentos">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="{{ url(asset('Ponto_de_Vista_v2.png')) }}">
+    <meta name="twitter:image" content="{{ asset('og-ponto-de-vista-1200x630.png') }}">
     <meta name="twitter:title" content="{{ config('app.name', 'Ponto de Vista') }}">
     <meta name="twitter:description" content="Análises e conteúdos da Alta Vista Investimentos em um só lugar.">
     <style>
