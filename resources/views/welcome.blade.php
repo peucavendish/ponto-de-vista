@@ -442,6 +442,16 @@
             <h2>Série de análises da Alta Vista</h2>
             <p>Artigos assinados por nossa equipe de economia, renda fixa e mercados — macro, juros, inflação e estratégia.</p>
             <article class="economist-card">
+                <strong>IPCA de abril: composição, núcleos e Selic</strong>
+                <span>Por Guilherme Jung | 13/05/2026</span>
+                <a class="btn btn-primary" href="{{ route('artigos.ipca-abril-2026-composicao') }}">Ler artigo completo</a>
+            </article>
+            <article class="economist-card">
+                <strong>CPI dos EUA (abril): Fed, núcleo e emergentes</strong>
+                <span>Por Guilherme Jung | 13/05/2026</span>
+                <a class="btn btn-primary" href="{{ route('artigos.cpi-eua-abril-2026-fed') }}">Ler artigo completo</a>
+            </article>
+            <article class="economist-card">
                 <strong>CDI vs IPCA+: histórico dos últimos 25 anos</strong>
                 <span>Por Alexandre Setani | 13/05/2026</span>
                 <a class="btn btn-primary" href="{{ route('artigos.cdi-vs-ipca-plus-historico-25-anos') }}">Ler artigo completo</a>

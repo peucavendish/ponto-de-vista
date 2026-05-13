@@ -19,3 +19,9 @@ Route::view('/artigos/economista-chefe/copom-corta-025pp-29-04-2026', 'artigos.c
 
 Route::view('/artigos/economista-chefe/cdi-vs-ipca-plus-historico-25-anos', 'artigos.cdi-vs-ipca-plus-historico-25-anos')
     ->name('artigos.cdi-vs-ipca-plus-historico-25-anos');
+
+Route::view('/artigos/economista-chefe/cpi-eua-abril-2026-fed', 'artigos.cpi-eua-abril-2026-fed')
+    ->name('artigos.cpi-eua-abril-2026-fed');
+
+Route::view('/artigos/economista-chefe/ipca-abril-2026-composicao', 'artigos.ipca-abril-2026-composicao')
+    ->name('artigos.ipca-abril-2026-composicao');
