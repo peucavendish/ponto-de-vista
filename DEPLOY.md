@@ -195,7 +195,36 @@ curl -I "https://lp.altavistainvest.com.br/ponto-de-vista/"
 curl -I "https://lp.altavistainvest.com.br/ponto-de-vista/artigos/economista-chefe/copom-corta-025pp-29-04-2026"
 ```
 
-## 7) Troubleshooting rápido
+## 7) Atualização após `git push` (servidor)
+
+Na EC2, com o código já em `/var/www/ponto-de-vista` e o remoto configurado:
+
+```bash
+cd /var/www/ponto-de-vista
+git pull origin main
+```
+
+Em seguida, caches do Laravel (como na secção «4) Cache do Laravel»):
+
+```bash
+cd /var/www/ponto-de-vista
+sudo -u apache php artisan optimize:clear
+sudo -u apache php artisan config:cache
+sudo -u apache php artisan view:cache
+```
+
+Ou, de uma vez (após o `git pull` que trouxer o script):
+
+```bash
+cd /var/www/ponto-de-vista
+bash scripts/deploy-on-server.sh
+```
+
+Se já tiveres feito `git pull` noutro passo: `SKIP_GIT=1 bash scripts/deploy-on-server.sh`
+
+Só precisa de `systemctl reload nginx` / `restart php-fpm` se alterou Nginx ou PHP; para mudanças só em views/rotas, em geral basta o `view:cache` acima.
+
+## 8) Troubleshooting rápido
 
 - Erro `tempnam(): file created in the system's temporary directory`:
   - normalmente indica permissão/owner/contexto SELinux em `storage` e `bootstrap/cache`.
