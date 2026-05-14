@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="any">
-  <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
   <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('favicon-96x96.png') }}">
   <title>Ponto de Vista - Semana de 27 a 30 de abril de 2026</title>
   <meta name="description" content="Ponto de Vista: a leitura da Alta Vista sobre os mercados, por Guilherme Jung, economista-chefe. Semana de 27 a 30 de abril de 2026.">

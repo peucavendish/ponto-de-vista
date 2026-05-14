@@ -6,12 +6,13 @@
     <title>{{ config('app.name', 'Ponto de Vista') }}</title>
     <meta name="description" content="Análises e conteúdos da Alta Vista Investimentos em um só lugar.">
 
-    <!-- Favicon e imagem para compartilhamento -->
+    <!-- Favicon gerado a partir do logotipo Ponto de Vista (public/ponto-de-vista-logo-header.png) -->
     <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="any">
-    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('favicon-96x96.png') }}">
     <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('favicon-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('favicon-512x512.png') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
 
     <meta property="og:type" content="website">
