@@ -41,6 +41,10 @@
             --brand: #10254f;
             --brand-accent: #1f4a9d;
             --line: #dfe6f3;
+            --hub-gratis: #0f766e;
+            --hub-gratis-soft: #ccfbf1;
+            --hub-gratis-border: #5eead4;
+            --hub-gratis-text: #042f2e;
         }
 
         * { box-sizing: border-box; }
@@ -62,82 +66,105 @@
             position: sticky;
             top: 0;
             z-index: 10;
-            backdrop-filter: blur(8px);
-            background: rgba(237, 242, 251, 0.9);
-            border-bottom: 1px solid var(--line);
+            background: #ffffff;
+            border-bottom: 1px solid #e8ecf2;
         }
 
-        .topbar {
+        /* Barra no estilo do portal de conteúdo BTG: logo + link de acesso + CTA principal (referência: https://content.btgpactual.com/) */
+        .header-shell {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 1rem;
-            padding: 0.95rem 0;
+            gap: 1rem 1.5rem;
+            min-height: 72px;
+            padding: 0.65rem 0;
         }
 
-        .brand {
+        .header-logo {
             display: flex;
             align-items: center;
-            gap: 0.9rem;
             min-width: 0;
+            text-decoration: none;
+            color: inherit;
         }
 
-        .brand-logo {
+        .header-logo .brand-logo {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 0.4rem 0.7rem;
-            border-radius: 12px;
-            background: linear-gradient(130deg, #11264f 0%, #1f4a9d 100%);
-            border: 1px solid #2b5cb8;
-            box-shadow: 0 8px 16px rgba(11, 32, 77, 0.22);
+            padding: 0;
+            border: none;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
         }
 
-        .brand img {
-            width: 170px;
-            height: auto;
-            filter: brightness(1.14) contrast(1.35) saturate(1.18);
+        .header-logo .brand-logo img {
+            height: clamp(42px, 11vw, 56px);
+            width: auto;
+            display: block;
+            object-fit: contain;
+            object-position: left center;
         }
 
-        .brand span {
-            color: var(--muted);
-            font-size: 0.85rem;
-            border-left: 1px solid var(--line);
-            padding-left: 0.9rem;
-            white-space: nowrap;
-        }
-
-        nav {
+        .header-actions {
             display: flex;
-            gap: 1.1rem;
             flex-wrap: wrap;
+            align-items: center;
             justify-content: flex-end;
+            gap: 0.35rem 1.25rem;
         }
 
-        .nav-invest {
-            background: #10254f;
-            color: #ffffff;
-            border: 1px solid #10254f;
-        }
-
-        .nav-invest:hover {
-            background: #1f4a9d;
-            color: #ffffff;
-        }
-
-        nav a {
-            color: #304263;
-            text-decoration: none;
-            font-size: 0.92rem;
+        .hdr-link {
+            font-size: 0.875rem;
             font-weight: 600;
-            padding: 0.32rem 0.55rem;
-            border-radius: 8px;
-            transition: background-color 0.2s ease, color 0.2s ease;
+            color: var(--brand-accent);
+            text-decoration: none;
+            white-space: nowrap;
+            padding: 0.4rem 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.15s ease, color 0.15s ease;
         }
 
-        nav a:hover {
-            background: #e8eefb;
-            color: #10254f;
+        .hdr-link:hover {
+            border-bottom-color: currentColor;
+        }
+
+        .hdr-link--muted {
+            color: var(--muted);
+        }
+
+        .hdr-link--muted:hover {
+            color: var(--text);
+            border-bottom-color: var(--line);
+        }
+
+        .hdr-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.58rem 1.15rem;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: #ffffff;
+            background: var(--brand);
+            border: 1px solid #081530;
+            text-align: center;
+            line-height: 1.25;
+            max-width: 100%;
+            transition: background-color 0.18s ease, box-shadow 0.18s ease;
+        }
+
+        .hdr-btn:hover {
+            background: var(--brand-accent);
+            box-shadow: 0 4px 12px rgba(16, 37, 79, 0.18);
+        }
+
+        .hdr-btn:focus-visible {
+            outline: 2px solid var(--brand-accent);
+            outline-offset: 2px;
         }
 
         .hero {
@@ -239,10 +266,26 @@
             background: #f8fbff;
         }
 
-        .btn-secondary {
-            color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.45);
-            background: rgba(255, 255, 255, 0.06);
+        .btn-hub-gratis {
+            flex-direction: column;
+            gap: 0.2rem;
+            padding: 0.7rem 1.05rem;
+            line-height: 1.2;
+            background: linear-gradient(165deg, #5eead4 0%, #2dd4bf 45%, #14b8a6 100%);
+            color: var(--hub-gratis-text);
+            border: 1px solid #0f766e;
+            box-shadow: 0 10px 22px rgba(6, 78, 59, 0.35);
+        }
+
+        .btn-hub-gratis:hover {
+            background: linear-gradient(165deg, #99f6e4 0%, #5eead4 55%, #2dd4bf 100%);
+            color: #011f1c;
+        }
+
+        .btn-hub-gratis .hub-gratis-title {
+            font-size: 0.9rem;
+            text-align: center;
+            max-width: 20rem;
         }
 
         .btn-invest {
@@ -397,30 +440,46 @@
         @media (max-width: 980px) {
             .hero { grid-template-columns: 1fr; }
             .newsletter-grid { grid-template-columns: 1fr; }
-            .brand span { display: none; }
         }
 
         @media (max-width: 640px) {
             .hero-copy { padding: 1.4rem; }
-            nav { gap: 0.65rem; }
-            nav a { font-size: 0.84rem; }
-            .brand-logo { padding: 0.32rem 0.55rem; }
-            .brand img { width: 138px; }
+        }
+
+        @media (max-width: 560px) {
+            .header-shell {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .header-actions {
+                justify-content: flex-start;
+                width: 100%;
+            }
+
+            .hdr-btn {
+                width: 100%;
+                order: 3;
+            }
+
+            .hdr-link {
+                white-space: normal;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="wrapper topbar">
-            <div class="brand">
+        <div class="wrapper header-shell">
+            <a class="header-logo" href="{{ url('/') }}" aria-label="Ponto de Vista — início">
                 <div class="brand-logo">
-                    <img src="{{ asset('Ponto_de_Vista.png') }}" alt="Ponto de Vista">
+                    <img src="{{ asset('ponto-de-vista-logo-header.png') }}" width="500" height="500" alt="Ponto de Vista">
                 </div>
-                <span>Portal de Conteúdos da Alta Vista Investimentos</span>
-            </div>
-            <nav>
-                <a class="btn-hub" href="https://ponto-de-vista.tradeinsights.com/plano/interno-av/gratuito" target="_blank" rel="noopener noreferrer">Acessar Hub Audiovisual</a>
-                <a class="nav-invest" href="https://lp.altavistainvest.com.br/conteudos-investir" target="_blank" rel="noopener noreferrer">Quero investir</a>
+            </a>
+            <nav class="header-actions" aria-label="Navegação principal">
+                <a class="hdr-link" href="https://ponto-de-vista.tradeinsights.com/" target="_blank" rel="noopener noreferrer">Hub de conteúdos</a>
+                <a class="hdr-btn" href="https://ponto-de-vista.tradeinsights.com/plano/interno-av/gratuito" target="_blank" rel="noopener noreferrer">Cadastro gratuito no hub de conteúdos</a>
+                <a class="hdr-link hdr-link--muted" href="https://lp.altavistainvest.com.br/conteudos-investir" target="_blank" rel="noopener noreferrer">Quero investir</a>
             </nav>
         </div>
     </header>
@@ -435,8 +494,11 @@
                     com linguagem clara e foco prático para apoiar suas decisões financeiras.
                 </p>
                 <div class="hero-actions">
-                    <a class="btn btn-hub" href="https://ponto-de-vista.tradeinsights.com/plano/interno-av/gratuito" target="_blank" rel="noopener noreferrer">
-                        Acessar Hub de Conteúdos Audiovisuais
+                    <a class="btn btn-hub" href="https://ponto-de-vista.tradeinsights.com/" target="_blank" rel="noopener noreferrer">
+                        Acessar hub de conteúdos
+                    </a>
+                    <a class="btn btn-hub-gratis" href="https://ponto-de-vista.tradeinsights.com/plano/interno-av/gratuito" target="_blank" rel="noopener noreferrer">
+                        <span class="hub-gratis-title">Cadastro gratuito no hub de conteúdos</span>
                     </a>
                 </div>
                 <a class="hero-support-link" href="https://lp.altavistainvest.com.br/conteudos-investir" target="_blank" rel="noopener noreferrer">
