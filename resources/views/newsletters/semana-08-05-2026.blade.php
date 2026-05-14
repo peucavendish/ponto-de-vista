@@ -7,11 +7,14 @@
   <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
   <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('favicon-96x96.png') }}">
-  <title>Ponto de Vista - Semana de 27 a 30 de abril de 2026</title>
-  <meta name="description" content="Ponto de Vista: a leitura da Alta Vista sobre os mercados, por Guilherme Jung, economista-chefe. Semana de 27 a 30 de abril de 2026.">
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('favicon-192x192.png') }}">
+  <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('favicon-512x512.png') }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
+  <title>Ponto de Vista - Semana de 4 a 8 de maio de 2026</title>
+  <meta name="description" content="Ponto de Vista: a leitura da Alta Vista sobre os mercados, por Guilherme Jung, economista-chefe. Semana de 4 a 8 de maio de 2026.">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Ponto de Vista - Semana de 27 a 30 de abril de 2026">
+  <meta property="og:title" content="Ponto de Vista - Semana de 4 a 8 de maio de 2026">
   <meta property="og:description" content="A leitura da Alta Vista sobre os mercados, por Guilherme Jung, economista-chefe.">
   <meta property="og:url" content="{{ url()->current() }}">
   <meta property="og:image" content="{{ url(asset('img/ponto-de-vista-newsletter-01-1200x630.png')) }}">
@@ -19,9 +22,9 @@
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Ponto de Vista - newsletter semanal, Alta Vista Investimentos">
+  <meta property="og:image:alt" content="Ponto de Vista – newsletter semanal, Alta Vista Investimentos">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ponto de Vista - Semana de 27 a 30 de abril de 2026">
+  <meta name="twitter:title" content="Ponto de Vista - Semana de 4 a 8 de maio de 2026">
   <meta name="twitter:description" content="A leitura da Alta Vista sobre os mercados, por Guilherme Jung, economista-chefe.">
   <meta name="twitter:image" content="{{ url(asset('img/ponto-de-vista-newsletter-01-1200x630.png')) }}">
   <style>
@@ -47,6 +50,15 @@
     }
     .newsletter-card a { transition: opacity .16s ease, filter .16s ease; }
     .newsletter-card a:hover { opacity: .93; filter: saturate(1.02); }
+    .newsletter-toplink {
+      font-size: 12px;
+      color: #64748b;
+      font-family: Arial, sans-serif;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(100, 116, 139, 0.35);
+      padding-bottom: 1px;
+    }
+    .newsletter-toplink:hover { color: var(--pv-navy); border-bottom-color: rgba(10, 22, 40, 0.45); }
     @media only screen and (max-width: 620px) {
       .newsletter-shell { width: 100% !important; max-width: 100% !important; }
       .newsletter-card { width: 100% !important; max-width: 100% !important; border-radius: 0 !important; }
@@ -66,22 +78,19 @@
         padding-top: 2px !important;
         padding-bottom: 12px !important;
       }
-      .btn-wa {
-        display: block !important;
-        width: 100% !important;
-        max-width: 280px !important;
-        box-sizing: border-box !important;
-        padding: 12px 18px !important;
-        font-size: 12px !important;
-        text-align: center !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-      }
+      .btn-wa { display: block !important; width: 100% !important; max-width: 280px !important; box-sizing: border-box !important; padding: 12px 18px !important; font-size: 12px !important; text-align: center !important; margin-left: auto !important; margin-right: auto !important; }
     }
   </style>
 </head>
 <body style="margin:0; padding:0; background-color:#edf2f7;">
   <center style="width:100%; background-color:#edf2f7;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+        <td align="center" style="padding:10px 10px 0 10px;">
+          <a class="newsletter-toplink" href="{{ url('/') }}#newsletters">&larr; Voltar ao portal</a>
+        </td>
+      </tr>
+    </table>
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
       <tr>
         <td align="center" class="newsletter-shell" style="padding:14px 10px;">
@@ -91,7 +100,7 @@
                 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                   <tr>
                     <td align="center" class="pad-page" style="padding:28px 24px 22px 24px; text-align:center;">
-                      <img src="https://lp.altavistainvest.com.br/img/ASSINATURA-HORIZONTAIS-LIGHT-XP.png"
+                      <img src="{{ asset('img/ASSINATURA-HORIZONTAIS-LIGHT-XP.png') }}"
                            alt="Alta Vista Investimentos"
                            width="240"
                            class="newsletter-logo"
@@ -118,7 +127,7 @@
                         Por Guilherme Jung, economista-chefe
                       </p>
                       <p style="margin:2px 0 0 0; font-size:13px; line-height:1.7; color:#f7fafc; font-family:Arial, sans-serif; text-align:center;">
-                        <strong>Semana de 27 a 30 de abril de 2026</strong>
+                        <strong>Semana de 4 a 8 de maio de 2026</strong>
                       </p>
                     </td>
                   </tr>
@@ -146,10 +155,13 @@
                         🔎 O Fato da Semana
                       </p>
                       <p style="margin:0 0 8px 0; font-size:13px; line-height:1.65; color:#edf2f7; font-family:Arial, sans-serif;">
-                        A semana foi dominada pela continuidade do conflito no Oriente Médio. O Irã submeteu uma proposta de cessar-fogo via mediadores do Paquistão - prevendo a reabertura do Estreito de Ormuz, o fim das hostilidades e o adiamento do debate nuclear - mas Trump rejeitou o plano, insistindo que não encerrará a guerra sem garantias de que o Irã nunca obterá uma arma nuclear.
+                        A semana foi marcada pela volatilidade do conflito no Oriente Médio e seus efeitos em cascata sobre os mercados globais. No início da semana, o Irã atacou instalações dos Emirados Árabes Unidos após os Estados Unidos lançarem a operação “Project Freedom” para escoltar navios pelo Estreito de Ormuz, elevando o petróleo Brent a US$ 114/barril na segunda-feira.
+                      </p>
+                      <p style="margin:0 0 8px 0; font-size:13px; line-height:1.65; color:#edf2f7; font-family:Arial, sans-serif;">
+                        A dinâmica da guerra foi oscilando ao longo dos dias: Trump pausou temporariamente a operação na quarta-feira, sinalizando “grande progresso” nas negociações, o que derrubou o petróleo 7,5% para US$ 101,5/barril. No entanto, na quinta-feira o Irã rejeitou o acordo como “plano irrealista”, e novos ataques foram reportados, fazendo o Brent voltar a US$ 102/barril.
                       </p>
                       <p style="margin:0; font-size:13px; line-height:1.65; color:#edf2f7; font-family:Arial, sans-serif;">
-                        Com o bloqueio do Estreito de Ormuz se mantendo, o petróleo Brent voltou a negociar próximo de US$ 120 por barril - o maior nível desde meados de 2022. O choque energético global virou o tema central da semana: pressionando inflação, travando bancos centrais e redefinindo setores na bolsa.
+                        A instabilidade geopolítica segue sendo o principal driver dos mercados globais.
                       </p>
                     </td>
                   </tr>
@@ -163,17 +175,13 @@
                   🌍 O Mundo em Movimento
                 </p>
                 <p style="margin:0 0 8px 0; font-size:13px; line-height:1.7; color:#4a5568; font-family:Arial, sans-serif;">
-                  Nos Estados Unidos, o Fed manteve os juros entre 3,50% e 3,75%, mesmo com quatro dissidências - a maior divisão desde 1992. Jerome Powell afirmou que o impacto da guerra sobre os preços ainda não atingiu o pico.
+                  Nos Estados Unidos, o mercado de trabalho seguiu resiliente: o relatório ADP mostrou criação de 109 mil vagas em abril, acima das estimativas de 99 mil. O PMI de Serviços (ISM) recuou de 54,0 para 53,6, mas ainda em zona de expansão. O grande destaque da sexta-feira foi o Nonfarm Payroll de abril: criação de <strong>115 mil empregos</strong>, acima das expectativas de 65 mil, com taxa de desemprego estável em 4,3%. O resultado reforça o cenário de mercado de trabalho resiliente e inflação pressionada — e consolida a postura do Fed de manter juros estáveis entre 3,50% e 3,75% por período prolongado, sem sinalização de cortes à frente.
                 </p>
-                <p style="margin:0 0 6px 0; font-size:13px; line-height:1.7; color:#4a5568; font-family:Arial, sans-serif;">
-                  Isso tem dois efeitos claros:
+                <p style="margin:0 0 8px 0; font-size:13px; line-height:1.7; color:#4a5568; font-family:Arial, sans-serif;">
+                  Na Europa, as bolsas operaram em queda ao longo da semana pressionadas pela exposição ao encarecimento da energia. Trump ameaçou ainda elevar as tarifas contra a União Europeia caso o bloco não cumpra os termos do acordo comercial firmado em julho passado, adicionando outra fonte de incerteza ao continente.
                 </p>
-                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f8fafc; border:1px solid #e2e8f0; border-radius:10px;">
-                  <tr><td style="padding:8px 10px 4px 10px; font-size:13px; line-height:1.6; color:#4a5568; font-family:Arial, sans-serif;">- Juros americanos devem permanecer no patamar atual por tempo prolongado</td></tr>
-                  <tr><td style="padding:2px 10px 8px 10px; font-size:13px; line-height:1.6; color:#4a5568; font-family:Arial, sans-serif;">- O trade de IA voltou a ganhar força, favorecendo bolsas com menos exposição a commodities</td></tr>
-                </table>
-                <p style="margin:8px 0 0 0; font-size:13px; line-height:1.7; color:#4a5568; font-family:Arial, sans-serif;">
-                  Na Europa, BCE, BoE e Banco do Japão também mantiveram postura conservadora, citando incertezas geopolíticas e riscos inflacionários. Os Emirados Árabes Unidos anunciaram ainda sua saída da OPEP, fragilizando a coesão do bloco.
+                <p style="margin:0; font-size:13px; line-height:1.7; color:#4a5568; font-family:Arial, sans-serif;">
+                  Na Ásia, a semana foi de contrastes: o Nikkei renovou máximas históricas na quarta-feira (+5,0%), impulsionado por tecnologia e semicondutores, enquanto a AMD disparou +16% no after com guidance forte. A Coreia do Sul também renovou máximas históricas (+6,5%), com a Samsung Electronics subindo 14%. A China seguiu com desempenho misto, reagindo à volatilidade geopolítica global.
                 </p>
               </td>
             </tr>
@@ -184,13 +192,22 @@
                   🇧🇷 Brasil: Entre Expectativas e Realidade
                 </p>
                 <p style="margin:0 0 8px 0; font-size:13px; line-height:1.7; color:#4a5568; font-family:Arial, sans-serif;">
-                  O Copom cortou a Selic em 0,25 p.p., para 14,50% ao ano, em decisão unânime. O comunicado reconheceu piora no cenário inflacionário, com projeções se distanciando da meta, mas sinalizou que a política restritiva segue eficaz em desacelerar a atividade.
+                  O Copom divulgou a ata de sua reunião de 28 e 29 de abril, na qual reduziu a Selic em 0,25 p.p., para 14,50% ao ano. O documento reconhece que a política monetária restritiva está funcionando, mas mantém tom cauteloso, deixando em aberto o ritmo e a extensão dos próximos passos. Em nossa leitura, o Copom ainda contempla cortes adicionais à frente.
                 </p>
                 <p style="margin:0 0 8px 0; font-size:13px; line-height:1.7; color:#4a5568; font-family:Arial, sans-serif;">
-                  O IPCA-15 de abril avançou 0,89%, com pressão em combustíveis e bens industriais. O mercado de trabalho segue aquecido: o CAGED registrou criação de 228 mil empregos em março e a taxa de desemprego permanece em 5,6%, mínima histórica.
+                  No campo macro, a XP revisou suas projeções: câmbio para o final de 2026 passou de R$ 5,30 para <strong>R$ 5,00/USD</strong>, refletindo o Brasil como “vencedor relativo” do cenário geopolítico. Em contrapartida, o <strong>IPCA de 2026 foi elevado de 5,1% para 5,3%</strong>, pressionado pelos custos de energia. A projeção para a Selic foi ajustada para <strong>13,75%</strong> ao final do ano (antes: 13,50%), com mais três cortes de 0,25 p.p. seguidos de pausa — ritmo mais gradual diante da maior inércia inflacionária.
                 </p>
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#fffbeb; border:1px solid #f6e05e; border-left:4px solid #c9a227; border-radius:10px; margin:0 0 10px 0;">
+                  <tr>
+                    <td style="padding:12px 14px;">
+                      <p style="margin:0; font-size:13px; line-height:1.65; color:#744210; font-family:Arial, sans-serif;">
+                        💡 <strong>Contradição a observar:</strong> real em mínima de 2 anos (R$ 4,91) ao mesmo tempo em que a inflação sobe. O canal cambial ajuda no IPCA de 2027, mas o choque de energia domina o curto prazo.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
                 <p style="margin:0; font-size:13px; line-height:1.7; color:#4a5568; font-family:Arial, sans-serif;">
-                  No campo político, o Senado rejeitou a indicação de Jorge Messias para o STF, o que deve atrasar outras nomeações pendentes, incluindo vagas no Banco Central.
+                  Na agenda política, o presidente Lula viajou a Washington para seu segundo encontro com Trump, considerado positivo por ambos os lados. Terras raras e mineração foram os principais temas em pauta. A Política Nacional de Minerais Críticos e Estratégicos (PNMCE) foi aprovada na Câmara dos Deputados e segue para o Senado, posicionando o Brasil como alternativa estratégica à dependência chinesa. Na esfera econômica, a produção industrial avançou 0,1% em março e 1,4% no 1T26. A balança comercial de abril registrou o maior superávit para o mês: US$ 10,5 bilhões, impulsionado por exportações de petróleo (+24%), minério de ferro (+20%) e soja (+19%).
                 </p>
               </td>
             </tr>
@@ -204,18 +221,18 @@
                         📈 Mercados
                       </p>
                       <p style="margin:0 0 10px 0; font-size:13px; line-height:1.6; color:#4a5568; font-family:Arial, sans-serif;">
-                        Os mercados locais ficaram para trás num ambiente global que fechou no campo positivo.
+                        Os mercados locais refletiram a montanha-russa do Oriente Médio. O Ibovespa oscilou durante a semana: abriu em queda na segunda (−0,9%, aos 185.600 pts), recuperou nas terça e quarta com o otimismo de um acordo (+0,6% e +0,5%), mas voltou a ceder na quinta após a ruptura das negociações (−2,4%, aos 183.218 pts).
                       </p>
                       <p style="margin:0 0 12px 0; font-size:13px; line-height:1.6; color:#4a5568; font-family:Arial, sans-serif;">
-                        <strong>Principais indicadores da semana:</strong>
+                        <strong>Fechamento semanal (4–8/mai):</strong>
                       </p>
                       <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                         <tr>
                           <td style="padding:0 0 8px 0;">
                             <table role="presentation" class="mercado-indicator-row" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#ffffff; border:1px solid #e2e8f0; border-radius:12px;">
                               <tr>
-                                <td class="mercado-ind-label" valign="middle" style="padding:12px 14px 12px 16px; font-size:12px; line-height:1.35; color:#718096; font-family:Arial, sans-serif; width:42%;">Ibovespa (semana)</td>
-                                <td class="mercado-ind-value" valign="middle" align="right" style="padding:12px 16px 12px 10px; font-size:15px; line-height:1.35; font-weight:bold; color:#0a1628; font-family:Arial, sans-serif;">-1,8% em reais a 187.318 pts</td>
+                                <td class="mercado-ind-label" valign="middle" style="padding:12px 14px 12px 16px; font-size:12px; line-height:1.35; color:#718096; font-family:Arial, sans-serif; width:42%;">Ibovespa (IBOV)</td>
+                                <td class="mercado-ind-value" valign="middle" align="right" style="padding:12px 16px 12px 10px; font-size:15px; line-height:1.35; font-weight:bold; color:#0a1628; font-family:Arial, sans-serif;">−1,71% a 184.108 pts <span style="font-size:11px; font-weight:normal; color:#718096;">(187.318 → 184.108)</span></td>
                               </tr>
                             </table>
                           </td>
@@ -224,8 +241,8 @@
                           <td style="padding:0 0 8px 0;">
                             <table role="presentation" class="mercado-indicator-row" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#ffffff; border:1px solid #e2e8f0; border-radius:12px;">
                               <tr>
-                                <td class="mercado-ind-label" valign="middle" style="padding:12px 14px 12px 16px; font-size:12px; line-height:1.35; color:#718096; font-family:Arial, sans-serif; width:42%;">S&amp;P 500 (semana)</td>
-                                <td class="mercado-ind-value" valign="middle" align="right" style="padding:12px 16px 12px 10px; font-size:15px; line-height:1.35; font-weight:bold; color:#0a1628; font-family:Arial, sans-serif;">+1,08% a 7.230 pts</td>
+                                <td class="mercado-ind-label" valign="middle" style="padding:12px 14px 12px 16px; font-size:12px; line-height:1.35; color:#718096; font-family:Arial, sans-serif; width:42%;">Dólar (USD/BRL)</td>
+                                <td class="mercado-ind-value" valign="middle" align="right" style="padding:12px 16px 12px 10px; font-size:15px; line-height:1.35; font-weight:bold; color:#0a1628; font-family:Arial, sans-serif;">−1,35% a R$ 4,8929 <span style="font-size:11px; font-weight:normal; color:#718096;">(R$ 4,96 → R$ 4,8929)</span></td>
                               </tr>
                             </table>
                           </td>
@@ -234,8 +251,8 @@
                           <td style="padding:0 0 8px 0;">
                             <table role="presentation" class="mercado-indicator-row" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#ffffff; border:1px solid #e2e8f0; border-radius:12px;">
                               <tr>
-                                <td class="mercado-ind-label" valign="middle" style="padding:12px 14px 12px 16px; font-size:12px; line-height:1.35; color:#718096; font-family:Arial, sans-serif; width:42%;">Dólar (semana)</td>
-                                <td class="mercado-ind-value" valign="middle" align="right" style="padding:12px 16px 12px 10px; font-size:15px; line-height:1.35; font-weight:bold; color:#0a1628; font-family:Arial, sans-serif;">-0,5% a R$ 4,96</td>
+                                <td class="mercado-ind-label" valign="middle" style="padding:12px 14px 12px 16px; font-size:12px; line-height:1.35; color:#718096; font-family:Arial, sans-serif; width:42%;">S&amp;P 500 (SPX)</td>
+                                <td class="mercado-ind-value" valign="middle" align="right" style="padding:12px 16px 12px 10px; font-size:15px; line-height:1.35; font-weight:bold; color:#0a1628; font-family:Arial, sans-serif;">+2,34% a 7.398,92 pts <span style="font-size:11px; font-weight:normal; color:#718096;">(7.230 → 7.398,92)</span></td>
                               </tr>
                             </table>
                           </td>
@@ -244,15 +261,15 @@
                           <td style="padding:0 0 8px 0;">
                             <table role="presentation" class="mercado-indicator-row" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#ffffff; border:1px solid #e2e8f0; border-radius:12px;">
                               <tr>
-                                <td class="mercado-ind-label" valign="middle" style="padding:12px 14px 12px 16px; font-size:12px; line-height:1.35; color:#718096; font-family:Arial, sans-serif; width:42%;">Curva DI jan/36 (semana)</td>
-                                <td class="mercado-ind-value" valign="middle" align="right" style="padding:12px 16px 12px 10px; font-size:15px; line-height:1.35; font-weight:bold; color:#0a1628; font-family:Arial, sans-serif;">abertura de 11 p.b. a 13,68%</td>
+                                <td class="mercado-ind-label" valign="middle" style="padding:12px 14px 12px 16px; font-size:12px; line-height:1.35; color:#718096; font-family:Arial, sans-serif; width:42%;">Petróleo Brent</td>
+                                <td class="mercado-ind-value" valign="middle" align="right" style="padding:12px 16px 12px 10px; font-size:15px; line-height:1.35; font-weight:bold; color:#0a1628; font-family:Arial, sans-serif;">−7,67% a US$ 98,575 <span style="font-size:11px; font-weight:normal; color:#718096;">— recuo ligado à expectativa de cessar-fogo EUA-Irã</span></td>
                               </tr>
                             </table>
                           </td>
                         </tr>
                       </table>
                       <p style="margin:10px 0 0 0; font-size:13px; line-height:1.6; color:#4a5568; font-family:Arial, sans-serif;">
-                        Destaques positivos: Usiminas (+8,9%), PRIO (+6,0%) e Petrobras. Na ponta negativa, construtoras e educação lideraram as perdas, pressionadas pela abertura de juros e alta do petróleo.
+                        <strong>Destaques na bolsa:</strong> positivos — Smart Fit (SMFT3, +11,9%), Ambev (ABEV3, +15,3% na terça), C&amp;A (CEAB3, +6,6%). Negativos — Vamos (VAMO3, −7,3%), TIM (TIMS3, −8,2%), Petrobras (PETR3, −4,2%).
                       </p>
                     </td>
                   </tr>
@@ -266,16 +283,13 @@
                   🧠 O Ponto de Vista da Alta Vista
                 </p>
                 <p style="margin:0 0 8px 0; font-size:13px; line-height:1.7; color:#4a5568; font-family:Arial, sans-serif;">
-                  Mercados são cíclicos por natureza.
+                  Choques geopolíticos como o atual criam ruído, não tendência.
                 </p>
                 <p style="margin:0 0 8px 0; font-size:13px; line-height:1.7; color:#4a5568; font-family:Arial, sans-serif;">
-                  Um choque geopolítico como o atual comprime setores, abre spreads e testa a paciência dos investidores. Mas é exatamente nesses momentos que a estratégia de longo prazo se prova mais valiosa do que reações de curto prazo.
-                </p>
-                <p style="margin:0 0 8px 0; font-size:13px; line-height:1.7; color:#4a5568; font-family:Arial, sans-serif;">
-                  Ciclos mudam. Políticas mudam. E os mercados se ajustam.
+                  O Brasil, paradoxalmente, sai beneficiado neste cenário: exportador de petróleo, soja e minérios, o país é um “vencedor relativo” do conflito. A balança comercial em máxima histórica para abril, o real mais valorizado e a perspectiva de continuidade do ciclo de cortes da Selic formam um panorama construtivo para ativos locais de médio prazo.
                 </p>
                 <p style="margin:0; font-size:13px; line-height:1.7; color:#4a5568; font-family:Arial, sans-serif;">
-                  Diversificação e disciplina continuam sendo os maiores ativos de qualquer carteira bem construída.
+                  O risco não é ignorar a guerra — é reagir a ela emocionalmente, sem estratégia. Carteiras bem diversificadas, com exposição a renda fixa (carrego elevado), setores exportadores e ativos reais, são as que tendem a atravessar melhor esta fase.
                 </p>
               </td>
             </tr>
@@ -289,14 +303,13 @@
                         📅 O Que Observar na Próxima Semana
                       </p>
                       <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-                        <tr><td style="padding:2px 0; font-size:13px; line-height:1.6; color:#edf2f7; font-family:Arial, sans-serif;">* Ata do Copom (terça) - tom sobre o ritmo do ciclo de cortes</td></tr>
-                        <tr><td style="padding:2px 0; font-size:13px; line-height:1.6; color:#edf2f7; font-family:Arial, sans-serif;">* Nonfarm Payroll nos EUA (sexta) - termômetro do mercado de trabalho americano</td></tr>
-                        <tr><td style="padding:2px 0; font-size:13px; line-height:1.6; color:#edf2f7; font-family:Arial, sans-serif;">* ISM Serviços EUA e JOLTS (terça) - sinalizam saúde da economia americana</td></tr>
-                        <tr><td style="padding:2px 0 8px 0; font-size:13px; line-height:1.6; color:#edf2f7; font-family:Arial, sans-serif;">* Produção Industrial Brasil (quinta) - leitura da atividade doméstica em março</td></tr>
+                        <tr><td style="padding:2px 0; font-size:13px; line-height:1.6; color:#edf2f7; font-family:Arial, sans-serif;">* <strong>CPI e PPI dos EUA (terça e quarta)</strong> — inflação de abril; dado decisivo para o Fed</td></tr>
+                        <tr><td style="padding:2px 0; font-size:13px; line-height:1.6; color:#edf2f7; font-family:Arial, sans-serif;">* <strong>Vendas no varejo EUA (quinta)</strong> — termômetro da atividade americana pós-choque</td></tr>
+                        <tr><td style="padding:2px 0; font-size:13px; line-height:1.6; color:#edf2f7; font-family:Arial, sans-serif;">* <strong>IPCA de abril no Brasil (terça)</strong> — XP projeta 0,67% no mês e 4,39% no acumulado 12 meses</td></tr>
+                        <tr><td style="padding:2px 0; font-size:13px; line-height:1.6; color:#edf2f7; font-family:Arial, sans-serif;">* <strong>Varejo e serviços no Brasil (quarta e sexta)</strong> — leitura da atividade doméstica em março</td></tr>
+                        <tr><td style="padding:2px 0; font-size:13px; line-height:1.6; color:#edf2f7; font-family:Arial, sans-serif;">* <strong>Votação da PNMCE no Senado</strong> — posicionamento do Brasil em minerais estratégicos</td></tr>
+                        <tr><td style="padding:2px 0 8px 0; font-size:13px; line-height:1.6; color:#edf2f7; font-family:Arial, sans-serif;">* <strong>Temporada de resultados 1T26</strong> — Embraer, bancos e setor elétrico em foco</td></tr>
                       </table>
-                      <p style="margin:10px 0 0 0; font-size:13px; line-height:1.65; color:#edf2f7; font-family:Arial, sans-serif;">
-                        Os dados de emprego nos EUA serão decisivos para calibrar as expectativas sobre o Fed nas próximas reuniões.
-                      </p>
                     </td>
                   </tr>
                 </table>
@@ -327,7 +340,6 @@
               <td align="center" class="pad-page" style="padding:10px 30px 24px 30px;">
                 <a href="https://wa.me/5511966204332?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20com%20um%20assessor%20da%20Alta%20Vista%20sobre%20investimentos."
                    class="btn-wa"
-                   target="_blank"
                    style="display:inline-block; padding:14px 34px; background-color:#c9a227; color:#0a1628; text-decoration:none; font-size:13px; font-weight:bold; border-radius:999px; font-family:Arial, sans-serif; letter-spacing:1px; text-transform:uppercase;">
                   Falar no WhatsApp
                 </a>

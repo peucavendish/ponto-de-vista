@@ -167,6 +167,7 @@ else
     "/artigos/economista-chefe/cdi-vs-ipca-plus-historico-25-anos"
     "/artigos/economista-chefe/cpi-eua-abril-2026-fed"
     "/artigos/economista-chefe/ipca-abril-2026-composicao"
+    "/newsletters/semana-08-05-2026"
     "/newsletters/semana-30-04-2026"
   )
   FAILED=0

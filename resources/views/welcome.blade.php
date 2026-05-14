@@ -390,66 +390,86 @@
 
         .newsletter-panel {
             margin: 1.2rem 0 1.6rem;
-            background: linear-gradient(130deg, #10254f 0%, #1f4a9d 100%);
-            border: 1px solid #193f86;
+            background: linear-gradient(165deg, #1e3d78 0%, #1a3673 42%, #152a58 100%);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 20px;
-            padding: 1.35rem;
-            box-shadow: 0 14px 28px rgba(16, 37, 79, 0.2);
+            padding: 1.5rem 1.35rem 1.45rem;
+            box-shadow: 0 16px 36px rgba(10, 22, 48, 0.28);
+        }
+
+        .newsletter-panel-head {
+            margin-bottom: 0.15rem;
         }
 
         .newsletter-panel h2 {
             color: #ffffff;
             margin: 0;
+            font-size: 1.22rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
         }
 
         .newsletter-panel .panel-sub {
-            color: #d2ddf6;
+            margin: 0.55rem 0 0;
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 0.92rem;
+            font-weight: 400;
+            line-height: 1.45;
+            max-width: 52ch;
         }
 
         .newsletter-grid {
-            margin-top: 0.9rem;
+            margin-top: 1.1rem;
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 0.75rem;
+            gap: 0.85rem;
         }
 
         .newsletter-item {
-            border: 1px solid #315da9;
-            border-radius: 12px;
-            padding: 0.9rem;
-            background: rgba(255, 255, 255, 0.08);
-            transition: transform 0.16s ease, box-shadow 0.2s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 14px;
+            padding: 1rem 1rem 0.95rem;
+            background: rgba(45, 90, 160, 0.42);
+            box-shadow: 0 4px 14px rgba(8, 16, 40, 0.18);
+            transition: transform 0.16s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
         }
 
         .newsletter-item:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 20px rgba(8, 19, 46, 0.24);
+            border-color: rgba(255, 255, 255, 0.28);
+            background: rgba(55, 102, 178, 0.5);
+            box-shadow: 0 10px 22px rgba(8, 19, 46, 0.28);
         }
 
         .newsletter-item strong {
             display: block;
-            font-size: 0.94rem;
-            line-height: 1.35;
-            margin-bottom: 0.35rem;
+            font-size: 0.95rem;
+            line-height: 1.38;
+            margin-bottom: 0.55rem;
             color: #ffffff;
+            font-weight: 700;
         }
 
         .newsletter-item a {
-            color: #fff;
+            color: #ffffff;
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 700;
             display: inline-flex;
             align-items: center;
-            gap: 0.4rem;
-            background: rgba(255, 255, 255, 0.16);
-            border: 1px solid rgba(255, 255, 255, 0.34);
+            gap: 0.35rem;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.28);
             border-radius: 999px;
-            padding: 0.32rem 0.62rem;
+            padding: 0.38rem 0.72rem;
+            letter-spacing: 0.01em;
+            transition: background-color 0.18s ease, border-color 0.18s ease;
         }
 
         .newsletter-item a:hover {
             background: rgba(255, 255, 255, 0.24);
+            border-color: rgba(255, 255, 255, 0.4);
         }
 
         .economist-series {
@@ -627,10 +647,16 @@
             </article>
         </section>
 
-        <section class="newsletter-panel">
-            <h2>Newsletters em destaque</h2>
-            <p class="panel-sub">Acesse as últimas edições do Ponto de Vista em um clique.</p>
+        <section class="newsletter-panel" id="newsletters">
+            <header class="newsletter-panel-head">
+                <h2>Newsletters em destaque</h2>
+                <p class="panel-sub">Acesse as últimas edições do Ponto de Vista em um clique.</p>
+            </header>
             <div class="newsletter-grid">
+                <article class="newsletter-item">
+                    <strong>Ponto de Vista - Semana de 4 a 8 de maio de 2026</strong>
+                    <a href="{{ route('newsletters.semana-08-05-2026') }}">Ler agora →</a>
+                </article>
                 <article class="newsletter-item">
                     <strong>Ponto de Vista - Semana 30/04/2026</strong>
                     <a href="{{ route('newsletters.semana-30-04-2026') }}">Ler agora →</a>
