@@ -12,12 +12,19 @@
     <meta property="og:description" content="Leitura da Alta Vista sobre Selic, inflação e riscos externos após o Copom de 29/04/2026.">
     <meta property="og:url" content="{{ url('/artigos/economista-chefe/copom-corta-025pp-29-04-2026') }}">
     <meta property="og:site_name" content="Ponto de Vista">
+    <meta property="og:image" content="{{ asset('og-ponto-de-vista-1200x630.png') }}">
+    <meta property="og:image:secure_url" content="{{ asset('og-ponto-de-vista-1200x630.png') }}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Ponto de Vista — Alta Vista Investimentos">
     <meta property="article:author" content="Guilherme Jung">
     <meta property="article:published_time" content="2026-04-29">
     <meta property="article:section" content="Política Monetária">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Copom corta 0,25pp, mas o comunicado fala mais alto que a decisão">
     <meta name="twitter:description" content="Análise sobre Selic, expectativas e cenário externo em tom mais cauteloso do BC.">
+    <meta name="twitter:image" content="{{ asset('og-ponto-de-vista-1200x630.png') }}">
     <script type="application/ld+json">
         {
             "@@context": "https://schema.org",
