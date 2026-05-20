@@ -606,6 +606,11 @@
             <h2>Série de análises da Alta Vista</h2>
             <p>Artigos assinados por nossa equipe de economia, renda fixa e mercados — macro, juros, inflação e estratégia.</p>
             <article class="economist-card">
+                <strong>El Niño, IPCA e juros: o canal climático da inflação</strong>
+                <span>Por Guilherme Jung | 18/05/2026 · Estudo especial</span>
+                <a class="btn btn-primary" href="{{ route('artigos.el-nino-ipca-juros-2026') }}">Ler artigo completo</a>
+            </article>
+            <article class="economist-card">
                 <strong>IBC-Br de março: 1T26 sólido, herança fraca para o 2T</strong>
                 <span>Por Guilherme Jung | 18/05/2026</span>
                 <a class="btn btn-primary" href="{{ route('artigos.ibc-br-marco-2026-1t26') }}">Ler artigo completo</a>

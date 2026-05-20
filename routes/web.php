@@ -30,3 +30,6 @@ Route::view('/artigos/economista-chefe/ipca-abril-2026-composicao', 'artigos.ipc
 
 Route::view('/artigos/economista-chefe/ibc-br-marco-2026-1t26', 'artigos.ibc-br-marco-2026-1t26')
     ->name('artigos.ibc-br-marco-2026-1t26');
+
+Route::view('/artigos/economista-chefe/el-nino-ipca-juros-2026', 'artigos.el-nino-ipca-juros-2026')
+    ->name('artigos.el-nino-ipca-juros-2026');
