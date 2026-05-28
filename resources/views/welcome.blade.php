@@ -606,6 +606,11 @@
             <h2>Série de análises da Alta Vista</h2>
             <p>Artigos assinados por nossa equipe de economia, renda fixa e mercados — macro, juros, inflação e estratégia.</p>
             <article class="economist-card">
+                <strong>PCE dos EUA (abril): abaixo do consenso, Fed sem margem</strong>
+                <span>Por Guilherme Jung | 28/05/2026</span>
+                <a class="btn btn-primary" href="{{ route('artigos.pce-eua-abril-2026-fed') }}">Ler artigo completo</a>
+            </article>
+            <article class="economist-card">
                 <strong>El Niño, IPCA e juros: o canal climático da inflação</strong>
                 <span>Por Guilherme Jung | 18/05/2026 · Estudo especial</span>
                 <a class="btn btn-primary" href="{{ route('artigos.el-nino-ipca-juros-2026') }}">Ler artigo completo</a>
@@ -641,6 +646,10 @@
             <h2>Newsletters em destaque</h2>
             <p class="panel-sub">Acesse as últimas edições do Ponto de Vista em um clique.</p>
             <div class="newsletter-grid">
+                <article class="newsletter-item">
+                    <strong>Ponto de Vista - Semana 22/05/2026</strong>
+                    <a href="{{ route('newsletters.semana-22-05-2026') }}">Ler agora →</a>
+                </article>
                 <article class="newsletter-item">
                     <strong>Ponto de Vista - Semana 16/05/2026</strong>
                     <a href="{{ route('newsletters.semana-16-05-2026') }}">Ler agora →</a>

@@ -169,6 +169,8 @@ else
     "/artigos/economista-chefe/ipca-abril-2026-composicao"
     "/artigos/economista-chefe/ibc-br-marco-2026-1t26"
     "/artigos/economista-chefe/el-nino-ipca-juros-2026"
+    "/artigos/economista-chefe/pce-eua-abril-2026-fed"
+    "/newsletters/semana-22-05-2026"
     "/newsletters/semana-16-05-2026"
     "/newsletters/semana-08-05-2026"
     "/newsletters/semana-30-04-2026"
