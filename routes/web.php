@@ -37,3 +37,6 @@ Route::view('/artigos/economista-chefe/el-nino-ipca-juros-2026', 'artigos.el-nin
 
 Route::view('/artigos/economista-chefe/pce-eua-abril-2026-fed', 'artigos.pce-eua-abril-2026-fed')
     ->name('artigos.pce-eua-abril-2026-fed');
+
+Route::view('/artigos/economista-chefe/pib-brasil-1t26-2026', 'artigos.pib-brasil-1t26-2026')
+    ->name('artigos.pib-brasil-1t26-2026');

@@ -606,6 +606,11 @@
             <h2>Série de análises da Alta Vista</h2>
             <p>Artigos assinados por nossa equipe de economia, renda fixa e mercados — macro, juros, inflação e estratégia.</p>
             <article class="economist-card">
+                <strong>PIB do 1T26 (+1,1%): crescimento acima do consenso</strong>
+                <span>Por Guilherme Jung | 29/05/2026</span>
+                <a class="btn btn-primary" href="{{ route('artigos.pib-brasil-1t26-2026') }}">Ler artigo completo</a>
+            </article>
+            <article class="economist-card">
                 <strong>PCE dos EUA (abril): abaixo do consenso, Fed sem margem</strong>
                 <span>Por Guilherme Jung | 28/05/2026</span>
                 <a class="btn btn-primary" href="{{ route('artigos.pce-eua-abril-2026-fed') }}">Ler artigo completo</a>
