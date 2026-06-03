@@ -40,3 +40,6 @@ Route::view('/artigos/economista-chefe/pce-eua-abril-2026-fed', 'artigos.pce-eua
 
 Route::view('/artigos/economista-chefe/pib-brasil-1t26-2026', 'artigos.pib-brasil-1t26-2026')
     ->name('artigos.pib-brasil-1t26-2026');
+
+Route::view('/artigos/economista-chefe/spacex-ipo-economia-espacial-2026', 'artigos.spacex-ipo-economia-espacial-2026')
+    ->name('artigos.spacex-ipo-economia-espacial-2026');
