@@ -26,6 +26,9 @@ Route::view('/artigos/economista-chefe/cdi-vs-ipca-plus-historico-25-anos', 'art
 Route::view('/artigos/economista-chefe/cpi-eua-abril-2026-fed', 'artigos.cpi-eua-abril-2026-fed')
     ->name('artigos.cpi-eua-abril-2026-fed');
 
+Route::view('/artigos/economista-chefe/cpi-eua-maio-2026-fed', 'artigos.cpi-eua-maio-2026-fed')
+    ->name('artigos.cpi-eua-maio-2026-fed');
+
 Route::view('/artigos/economista-chefe/ipca-abril-2026-composicao', 'artigos.ipca-abril-2026-composicao')
     ->name('artigos.ipca-abril-2026-composicao');
 
