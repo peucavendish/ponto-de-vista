@@ -167,6 +167,7 @@ else
     "/artigos/economista-chefe/cdi-vs-ipca-plus-historico-25-anos"
     "/artigos/economista-chefe/cpi-eua-abril-2026-fed"
     "/artigos/economista-chefe/ipca-abril-2026-composicao"
+    "/artigos/economista-chefe/ipca-maio-2026-composicao"
     "/artigos/economista-chefe/ibc-br-marco-2026-1t26"
     "/artigos/economista-chefe/el-nino-ipca-juros-2026"
     "/artigos/economista-chefe/pce-eua-abril-2026-fed"

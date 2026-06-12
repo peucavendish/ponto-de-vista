@@ -32,6 +32,9 @@ Route::view('/artigos/economista-chefe/cpi-eua-maio-2026-fed', 'artigos.cpi-eua-
 Route::view('/artigos/economista-chefe/ipca-abril-2026-composicao', 'artigos.ipca-abril-2026-composicao')
     ->name('artigos.ipca-abril-2026-composicao');
 
+Route::view('/artigos/economista-chefe/ipca-maio-2026-composicao', 'artigos.ipca-maio-2026-composicao')
+    ->name('artigos.ipca-maio-2026-composicao');
+
 Route::view('/artigos/economista-chefe/ibc-br-marco-2026-1t26', 'artigos.ibc-br-marco-2026-1t26')
     ->name('artigos.ibc-br-marco-2026-1t26');
 

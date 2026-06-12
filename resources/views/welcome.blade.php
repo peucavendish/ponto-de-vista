@@ -606,6 +606,11 @@
             <h2>Série de análises da Alta Vista</h2>
             <p>Artigos assinados por nossa equipe de economia, renda fixa e mercados — macro, juros, inflação e estratégia.</p>
             <article class="economist-card">
+                <strong>IPCA de maio (0,58%): composição mais favorável que o headline</strong>
+                <span>Por Guilherme Jung | 12/06/2026</span>
+                <a class="btn btn-primary" href="{{ route('artigos.ipca-maio-2026-composicao') }}">Ler artigo completo</a>
+            </article>
+            <article class="economist-card">
                 <strong>CPI dos EUA (maio): acima de 4% em 12 meses, núcleo comportado</strong>
                 <span>Por Guilherme Jung | 10/06/2026</span>
                 <a class="btn btn-primary" href="{{ route('artigos.cpi-eua-maio-2026-fed') }}">Ler artigo completo</a>
