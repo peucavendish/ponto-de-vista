@@ -17,6 +17,9 @@ Route::view('/newsletters/semana-02-04-2026', 'newsletters.semana-02-04-2026')->
 Route::view('/newsletters/semana-27-03-2026', 'newsletters.semana-27-03-2026')->name('newsletters.semana-27-03-2026');
 Route::view('/newsletters/semana-23-06-2025', 'newsletters.semana-23-06-2025')->name('newsletters.semana-23-06-2025');
 
+Route::view('/artigos/economista-chefe/copom-0626-1425-17-06-2026', 'artigos.copom-0626-1425-17-06-2026')
+    ->name('artigos.copom-0626-1425-17-06-2026');
+
 Route::view('/artigos/economista-chefe/copom-corta-025pp-29-04-2026', 'artigos.copom-corta-025pp-29-04-2026')
     ->name('artigos.copom-corta-025pp-29-04-2026');
 
@@ -28,6 +31,9 @@ Route::view('/artigos/economista-chefe/cpi-eua-abril-2026-fed', 'artigos.cpi-eua
 
 Route::view('/artigos/economista-chefe/cpi-eua-maio-2026-fed', 'artigos.cpi-eua-maio-2026-fed')
     ->name('artigos.cpi-eua-maio-2026-fed');
+
+Route::view('/artigos/economista-chefe/fomc-06-2026-fed', 'artigos.fomc-06-2026-fed')
+    ->name('artigos.fomc-06-2026-fed');
 
 Route::view('/artigos/economista-chefe/ipca-abril-2026-composicao', 'artigos.ipca-abril-2026-composicao')
     ->name('artigos.ipca-abril-2026-composicao');

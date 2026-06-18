@@ -606,6 +606,16 @@
             <h2>Série de análises da Alta Vista</h2>
             <p>Artigos assinados por nossa equipe de economia, renda fixa e mercados — macro, juros, inflação e estratégia.</p>
             <article class="economist-card">
+                <strong>FOMC (jun/2026): Fed mantém juros, dot plot hawkish e Warsh reformula o Fed</strong>
+                <span>Por Guilherme Jung | 17/06/2026</span>
+                <a class="btn btn-primary" href="{{ route('artigos.fomc-06-2026-fed') }}">Ler artigo completo</a>
+            </article>
+            <article class="economist-card">
+                <strong>Copom 06/2026: corte de 0,25pp, Selic a 14,25% — comunicado fecha a porta</strong>
+                <span>Por Guilherme Jung | 17/06/2026</span>
+                <a class="btn btn-primary" href="{{ route('artigos.copom-0626-1425-17-06-2026') }}">Ler artigo completo</a>
+            </article>
+            <article class="economist-card">
                 <strong>IPCA de maio (0,58%): composição mais favorável que o headline</strong>
                 <span>Por Guilherme Jung | 12/06/2026</span>
                 <a class="btn btn-primary" href="{{ route('artigos.ipca-maio-2026-composicao') }}">Ler artigo completo</a>
