@@ -606,6 +606,11 @@
             <h2>Série de análises da Alta Vista</h2>
             <p>Artigos assinados por nossa equipe de economia, renda fixa e mercados — macro, juros, inflação e estratégia.</p>
             <article class="economist-card">
+                <strong>Ata Copom Jun/2026: hawkish no diagnóstico, cautelosa na ação</strong>
+                <span>Por Guilherme Jung | 23/06/2026</span>
+                <a class="btn btn-primary" href="{{ route('artigos.copom-ata-jun-2026-23-06-2026') }}">Ler artigo completo</a>
+            </article>
+            <article class="economist-card">
                 <strong>FOMC (jun/2026): Fed mantém juros, dot plot hawkish e Warsh reformula o Fed</strong>
                 <span>Por Guilherme Jung | 17/06/2026</span>
                 <a class="btn btn-primary" href="{{ route('artigos.fomc-06-2026-fed') }}">Ler artigo completo</a>

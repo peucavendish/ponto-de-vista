@@ -163,6 +163,7 @@ else
   echo ">> Smoke tests em produção"
   ROUTES=(
     "/"
+    "/artigos/economista-chefe/copom-ata-jun-2026-23-06-2026"
     "/artigos/economista-chefe/copom-corta-025pp-29-04-2026"
     "/artigos/economista-chefe/cdi-vs-ipca-plus-historico-25-anos"
     "/artigos/economista-chefe/cpi-eua-abril-2026-fed"
